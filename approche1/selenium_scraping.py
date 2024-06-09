@@ -111,55 +111,11 @@ if __name__ == "__main__":
     df_new = pd.DataFrame(data)
     print(df_new)
 
-    with pd.ExcelWriter('../files/Output_Data_Structures.xlsx', engine='openpyxl', mode='w') as writer:
+    with pd.ExcelWriter('../files/Result_Data_Structures.xlsx', engine='openpyxl', mode='w') as writer:
     # Write the new DataFrame to a new sheet
         df_new.to_excel(writer, index=False)
             
-#     technologies =  ['Spark','Pandas','Java','Python', 'PHP']
-#     fee = [25000,20000,15000,15000,18000]
-#     duration = ['5o Days','35 Days',np.nan,'30 Days', '30 Days']
-#     discount = [2000,1000,800,500,800]
-#     columns=['Courses','Fee','Duration','Discount']
 
-# # Create DataFrame from multiple lists
-#     df = pd.DataFrame(list(zip(technologies,fee,duration,discount)), columns=columns)
-    
-#     df1 = pd.DataFrame({'link':link})
-#     df2 = pd.DataFrame({'Image':image})
-#     df4 = pd.DataFrame({'Body_text':body_t})
-#     df3 = pd.DataFrame({'Para_text':scr})
-    
-
-#     output_file = f'{str(file_title)}{count}'+'.xlsx'
-#     output_file_path = Path(output_file)
-
-#     output_file_path.parent.mkdir(parents=True, exist_ok=True)
-
-
-#     pd.concat([df1,df2,df4,df3],axis=1).to_excel(output_file_path, sheet_name=f'{file_title}', index=False)
-
-        # file_creater_using_selenium(i)
-        
-        # options = webdriver.ChromeOptions()
-        # # options.add_argument('--headless')
-        # options.add_argument('log-level=3')
-    
-        # options.add_argument('--no-sandbox')
-        # options.add_argument("--disable-notifications")
-
-    
-        # driver = webdriver.Chrome(options=options)
-        # # driver.minimize_window()
-    
-        
-        # # print(i)
-        # # print(links_and_id[i])
-        # driver.get(i[1])
-        # print(driver)
-        # driver.implicitly_wait(20)
-    
-    # all_p = WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.TAG_NAME, "p")))
-    
 
 
 
